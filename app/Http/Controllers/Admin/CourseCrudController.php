@@ -47,8 +47,11 @@ class CourseCrudController extends CrudController
          * - CRUD::addColumn(['name' => 'price', 'type' => 'number']);
          */
 
-        CRUD::addColumn(['name' => 'CourseCategory.name', 'type' => 'text']);
+        CRUD::addColumn(['name' => 'CourseCategory.name', 'type' => 'text', 'label' => 'Category']);
         CRUD::addColumn(['name' => 'name', 'type' => 'text']);
+        CRUD::addColumn(['name' => 'status', 'type' => 'text']);
+        CRUD::addColumn(['name' => 'start_date', 'type' => 'text']);
+        CRUD::addColumn(['name' => 'end_date', 'type' => 'text']);
     }
 
     /**
@@ -78,7 +81,8 @@ class CourseCrudController extends CrudController
             'label' => 'Status',
             'type' => 'select_from_array',
             'options' => [
-              'Active' => 'Active',
+              'Active' => 'Active',,
+              'Ended' => 'Ended'
               'Cancelled' => 'Cancelled'
             ],
             'allows_null' => false,
