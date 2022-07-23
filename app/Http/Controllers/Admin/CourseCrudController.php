@@ -81,8 +81,8 @@ class CourseCrudController extends CrudController
             'label' => 'Status',
             'type' => 'select_from_array',
             'options' => [
-              'Active' => 'Active',,
-              'Ended' => 'Ended'
+              'Active' => 'Active',
+              'Ended' => 'Ended',
               'Cancelled' => 'Cancelled'
             ],
             'allows_null' => false,
